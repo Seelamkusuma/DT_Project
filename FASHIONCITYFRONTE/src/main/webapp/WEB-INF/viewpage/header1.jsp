@@ -1,4 +1,4 @@
-%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -13,6 +13,7 @@
 </head>
 <body>
 
+
 <c:if test="${sessionScope.loggedIn }">
 
 <nav class="navbar navbar-inverse">
@@ -20,35 +21,28 @@
     <div class="navbar-header">
       <a class="navbar-brand active" href="index.jsp">FashionCity</a>
     </div>
-     <a class="navbar-brand " href="UserHome1">Home</a>
-     <a  href="Cosmetics">cosmetics</a>
-      <a  href="Jewellery">jewellery</a>
-      <a href="Designerdresses">designerdresses</a>
-      <a href="Footwear">footwear</a>
-      <a href="Handbags">handbags</a>
-    <a href="Cart">CartPage</a>
-     <ul class="nav navbar-nav nav navbar-right">
-      <a href="CartPage">CartPage</a>
-     <a href="#">${sessionScope.username}</a>
-     </ul>
-      <ul class="nav navbar-nav nav navbar-right">
+    <ul class="nav navbar-nav">
+    
+      <li><a href="Product">product</a></li>
+      <li><a href="Supplier">supplier</a></li>
+     <li><a href="Category">category</a></li>
      
-     <a href="index.jsp">logout</a>
+    </ul>
+     <ul class="nav navbar-nav nav navbar-right">
+     
+     <a href="#">${sessionScope.username}</a>
+     <a href="index.jsp"> logout</a>
      </ul>
   </div>
 </nav>
 </c:if>
-
-
-
-
 
 <c:if test="${!sessionScope.loggedIn }">
 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="index.jsp">FashionCity</a>
+      <a class="navbar-brand" href="index.jsp">Evol</a>
     </div>
     <ul class="nav navbar-nav nav navbar-right">
      <li><a href="AdminHome">Adminhome</a></li>
@@ -60,5 +54,6 @@
   </div>
 </nav>
 </c:if>
+
 </body>
 </html>

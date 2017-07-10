@@ -264,6 +264,16 @@ public class ProductControl
 		return "Productpage";
 	}
 	
-	
+
+	@RequestMapping(value="/ProductDescription/{prodid}")
+	public String showProductDescription(@PathVariable("prodid") int prodid,Model m)
+	{
+		Product product=productDAO.getProduct(prodid);
+		m.addAttribute("prodinfo",product);
+		
+		return "ProductDescription";
+	}
 }
+
+
  

@@ -28,8 +28,8 @@ public class CartControl {
 	@Autowired
 	CartDAO cartDAO;
 	
-	@RequestMapping("/CartPage")
-	public String Cartpage(Model m,HttpSession session)
+	@RequestMapping("/Cart")
+	public String Cart(Model m,HttpSession session)
 	{
 		
 		String username=(String) session.getAttribute("username");
@@ -38,7 +38,7 @@ public class CartControl {
 		List<Cart> cartlist=cartDAO.getCartDetails(username);
 		m.addAttribute("cartlist",cartlist);
 		
-		return "CartPage";
+		return "Cart";
 	}
 	
 	
@@ -67,14 +67,14 @@ public class CartControl {
 		{
 			
 		
-		return "redirect:/CartPage";
+		return "redirect:/Cart";
 		}
 		else
 			
 		{
 			
 		
-		return "WarningPage";	
+		return "Warning";	
 		}
 
 	
@@ -103,7 +103,7 @@ String username=(String) session.getAttribute("username");
 	
 	
 	
-	return "redirect:/CartPage";
+	return "redirect:/Cart";
 	
 }
 
@@ -128,7 +128,7 @@ String username=(String) session.getAttribute("username");
 	
 	
 	
-	return "redirect:/CartPage";
+	return "redirect:/Cart";
 	
 }
 

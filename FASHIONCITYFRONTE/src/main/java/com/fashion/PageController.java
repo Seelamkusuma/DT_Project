@@ -33,5 +33,12 @@ public class PageController {
 	}
 	
 
+	@RequestMapping("/Warning")
+	public String warning()
+	{
+		
+		
+		return "Warning";
+}
 	
     }

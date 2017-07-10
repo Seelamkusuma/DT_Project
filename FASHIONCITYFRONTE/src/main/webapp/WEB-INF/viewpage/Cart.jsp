@@ -52,5 +52,6 @@ ${cartlist.productname}
 
 <input type="submit" value="ContinueShopping">
 </form>
+<a href="CheckOut">checkout</a>
 </body>
 </html>

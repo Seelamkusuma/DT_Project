@@ -14,7 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.fashion.FashionCity.dao.ProductDAO;
 import com.fashion.FashionCity.dao.UserDAO;
+import com.fashion.FashionCity.model.Product;
 import com.fashion.FashionCity.model.User;
 
 
@@ -24,6 +26,8 @@ public class UserControl {
 	
 	@Autowired
 	UserDAO userDAO;
+	@Autowired
+	ProductDAO productDAO;
 	@RequestMapping("/UserHome")
 	public String Login(Model m)
 	{
@@ -35,7 +39,7 @@ public class UserControl {
 	}
 	
 	@RequestMapping(value="/AddUser",method=RequestMethod.POST)
-    public String addUser(@RequestParam("username") String username , @RequestParam("password") String password,@RequestParam("email") String email,@RequestParam("phonenumber") String mobileno ,@RequestParam("role") String role,@RequestParam("address") String address)
+    public String addUser(@RequestParam("username") String username , @RequestParam("password") String password,@RequestParam("email") String email,@RequestParam("phonenumber") String mobileno ,@RequestParam("role") String role,@RequestParam("address") String address,Model m)
     {
     System.out.println("add user to db");
     System.out.println(username+";;;"+password);
@@ -45,6 +49,7 @@ public class UserControl {
     user.setEmail(email);
     user.setMobileno(mobileno);
     user.setRole(role);
+    user.setEnabled(true);
     user.setAddress(address);
     userDAO.insertUpdateUser(user);
     System.out.println("UserAdded");
@@ -54,7 +59,7 @@ public class UserControl {
 	
 	
 	@RequestMapping("/login_success")
-	public String loginsuccess(HttpSession session)
+	public String loginsuccess(HttpSession session,Model m)
 	{
 		System.out.println("loded successfully");
 		
@@ -80,6 +85,11 @@ boolean loggedIn=true;
 	}
 	else
 	{
+		Product product=new Product();
+		List<Product> prodlist=productDAO.getProductDetails();
+		m.addAttribute("prodlist",prodlist);
+		
+		
 	return "UserHome";
 	}
 	}

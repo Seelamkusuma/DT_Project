@@ -10,13 +10,8 @@
 
 <link href="<c:url value="/resources/theme1/css/signin.css" />" rel="stylesheet">
 <title>signin</title>
-
-
-
-
-
 </head>
-<body background ="<c:url value="/resources/images/ee.jpg"/>"> 
+<body background="<c:url value="/resources/images/ee.jpg"/>">
 <div class="container">
 
 	<form action="login" method="post">

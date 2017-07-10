@@ -19,12 +19,13 @@ import com.fashion.FashionCity.dao.CategoryDAO;
 import com.fashion.FashionCity.dao.ProductDAO;
 import com.fashion.FashionCity.dao.SupplierDAO;
 import com.fashion.FashionCity.dao.UserDAO;
+import com.fashion.FashionCity.dao.OrderDetailsDAO;
 import com.fashion.FashionCity.model.Cart;
 import com.fashion.FashionCity.model.Category;
 import com.fashion.FashionCity.model.Product;
 import com.fashion.FashionCity.model.Supplier;
 import com.fashion.FashionCity.model.User;
-
+import com.fashion.FashionCity.model.OrderDetails;
 @Configuration
 @ComponentScan("com.fashion.FashionCity")
 @EnableTransactionManagement
@@ -65,6 +66,7 @@ public class DBconfig
 		sessionBuilder.addAnnotatedClass(User.class);
 		sessionBuilder.addAnnotatedClass(Product.class);
 		sessionBuilder.addAnnotatedClass(Cart.class);
+		sessionBuilder.addAnnotatedClass(OrderDetails.class);
 		System.out.println("Session Factory Object Creation");
 		SessionFactory sessionFactory=sessionBuilder.buildSessionFactory();
 		System.out.println("Session Factory Object Created");
@@ -118,7 +120,13 @@ public class DBconfig
 			System.out.println("-- CartDAO Object Creation--");
 			return new CartDAO(sessionFactory);
 		}
-
+		@Autowired
+		@Bean(name="orderdetailsDAO")
+		public OrderDetailsDAO getOrderDetailsDAO(SessionFactory sessionFactory)
+		{
+			System.out.println("-- OrderDetailsDAO Object Creation--");
+			return new OrderDetailsDAO(sessionFactory);
+		}
 
 }
 

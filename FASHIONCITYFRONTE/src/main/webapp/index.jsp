@@ -56,6 +56,7 @@
       </div>
     </div>
 
+     
     <!-- Left and right controls -->
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left"></span>
