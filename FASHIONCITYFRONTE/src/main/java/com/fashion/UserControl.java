@@ -39,7 +39,7 @@ public class UserControl {
 	}
 	
 	@RequestMapping(value="/AddUser",method=RequestMethod.POST)
-    public String addUser(@RequestParam("username") String username , @RequestParam("password") String password,@RequestParam("email") String email,@RequestParam("phonenumber") String mobileno ,@RequestParam("role") String role,@RequestParam("address") String address,Model m)
+    public String addUser(@RequestParam("username") String username , @RequestParam("password") String password,@RequestParam("email") String email,@RequestParam("phonenumber") String mobileno ,@RequestParam("address") String address,Model m)
     {
     System.out.println("add user to db");
     System.out.println(username+";;;"+password);
@@ -48,12 +48,12 @@ public class UserControl {
     user.setPassword(password);
     user.setEmail(email);
     user.setMobileno(mobileno);
-    user.setRole(role);
+    user.setRole("user");
     user.setEnabled(true);
     user.setAddress(address);
     userDAO.insertUpdateUser(user);
     System.out.println("UserAdded");
-   return "signuppage";
+   return "redirect:/User";
    
     }
 	
@@ -99,7 +99,14 @@ boolean loggedIn=true;
    return "page";
 	}
 	
-	
+	@RequestMapping("/User")
+	public String userHome(HttpSession session,Model m)
+	{
+		Product product=new Product();
+		List<Product> prodlist=productDAO.getProductDetails();
+		m.addAttribute("prodlist",prodlist);
+		return "User";
+	}
 	
 
 }

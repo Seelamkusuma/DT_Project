@@ -6,7 +6,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<title>Cart</title>
 
 </head>
 <body>
@@ -48,10 +52,8 @@ ${cartlist.productname}
 
 
 </c:forEach>
-<form action="<c:url value="UserHome1"/>" method="get" >
+<a href="User" class="btn btn-success">Continue Shopping</a>
 
-<input type="submit" value="ContinueShopping">
-</form>
-<a href="CheckOut">checkout</a>
+<a href="CheckOut" class="btn btn-primary">CheckOut</a>
 </body>
 </html>

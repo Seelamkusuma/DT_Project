@@ -11,7 +11,7 @@
 </head>
 <body>
 <div>
-<jsp:include page="header.jsp"/>
+
 <img src="<c:url value="/resources/images/${prodinfo.prodid}.jpg"/>">
 </div>
 
@@ -22,7 +22,7 @@ ${prodinfo.prodname}
 <form action="<c:url value="/AddCart/${prodinfo.prodid}"/>" method="get">
 Quantity<input type="text" name="quantity"/>
 
-<input type="submit" name="submit"/>
+<input type="submit" name="submit" class="btn btn-info" value="Add to cart"/>
 </form>
 
 </body>

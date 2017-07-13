@@ -49,7 +49,7 @@ public class OrderDetailsDAO {
 	public List<OrderDetails> getOrdersDetails(String username)
 	{
 		Session session=sessionFactory.openSession();
-		Query query=session.createQuery("from OrderDetails where username=:username and status='Y'");
+		Query query=session.createQuery("from OrderDetails where username=:username and status='N'");
 		query.setParameter("username", username);
 		@SuppressWarnings("unchecked")
 		List<OrderDetails> list=query.list();

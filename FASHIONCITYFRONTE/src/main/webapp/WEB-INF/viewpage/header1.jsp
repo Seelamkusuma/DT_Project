@@ -19,19 +19,19 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand active" href="index.jsp">FashionCity</a>
+      <a class="navbar-brand active" href style="color:cyan;"="index.jsp">FashionCity</a>
     </div>
     <ul class="nav navbar-nav">
     
-      <li><a href="Product">product</a></li>
-      <li><a href="Supplier">supplier</a></li>
-     <li><a href="Category">category</a></li>
+      <li><a href="Product" class="btn btn-danger">product</a></li>
+      <li><a href ="Supplier"   class="btn btn-danger">supplier</a></li>
+     <li><a href="Category" class="btn btn-danger">category</a></li>
      
     </ul>
      <ul class="nav navbar-nav nav navbar-right">
      
-     <a href="#">${sessionScope.username}</a>
-     <a href="index.jsp"> logout</a>
+     <a href="#" class="btn btn-primary">${sessionScope.username}</a>
+     <a href="index.jsp" class="btn btn-primary"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> logout</a>
      </ul>
   </div>
 </nav>
@@ -42,13 +42,13 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="index.jsp">Evol</a>
+      <a class="navbar-brand" href="index.jsp">FashionCity</a>
     </div>
     <ul class="nav navbar-nav nav navbar-right">
-     <li><a href="AdminHome">Adminhome</a></li>
-      <li><a href="Product">product</a></li>
-      <li><a href="Supplier">supplier</a></li>
-     <li><a href="Category">category</a></li>
+     <li><a href="AdminHome" class="btn btn-danger"></a>Adminhome</a></li>
+      <li><a href="Product" class="btn btn-danger">product</a></li>
+      <li><a href="Supplier" class="btn btn-danger">supplier</a></li>
+     <li><a href="Category" class="btn btn-danger">category</a></li>
      
     </ul>
   </div>

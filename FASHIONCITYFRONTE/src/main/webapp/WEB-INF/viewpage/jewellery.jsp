@@ -12,7 +12,7 @@
 
 
 <c:forEach items="${prodlist}" var="prodlist"  >
-<c:if test="${1==prodlist.catid }">
+<c:if test="${8==prodlist.catid }">
 
 
 

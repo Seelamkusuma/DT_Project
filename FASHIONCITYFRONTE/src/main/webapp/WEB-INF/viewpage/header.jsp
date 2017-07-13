@@ -1,5 +1,4 @@
-%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -18,22 +17,22 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand active" href="index.jsp">FashionCity</a>
+      <a class="navbar-brand active" href style="color:cyan;" ="index.jsp">FashionCity</a>
     </div>
-     <a class="navbar-brand " href="UserHome1">Home</a>
-     <a  href="Cosmetics">cosmetics</a>
-      <a  href="Jewellery">jewellery</a>
-      <a href="Designerdresses">designerdresses</a>
-      <a href="Footwear">footwear</a>
-      <a href="Handbags">handbags</a>
-    <a href="Cart">CartPage</a>
+     <a class="btn btn-primary glyphicon glyphicon-home" href="User" ></span>Home</a>
+     <a href ="Cosmetics" class="btn btn-primary"><img src="<c:url value="/resources/images/cos.png"/>">Cosmetics</a>
+      <a href ="Jewellery" class="btn btn-primary"><img src="<c:url value="/resources/images/jj.png"/>" >Jewellery</a>
+      <a href ="DesignerDresses" class="btn btn-primary"><img src="<c:url value="/resources/images/suit.png"/>">Designer Dresses</a>
+      <a href ="Footwear" class="btn btn-primary"><img src="<c:url value="/resources/images/footwear1.png"/>">Footwear</a>
+      <a href ="Handbags" class="btn btn-primary"><img src="<c:url value="/resources/images/bag.png"/>">Handbags</a>
+    <a href ="Cart" class="btn btn-primary" ><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>CartPage</a>
      <ul class="nav navbar-nav nav navbar-right">
-      <a href="CartPage">CartPage</a>
-     <a href="#">${sessionScope.username}</a>
+    
+     <a href ="#" class="btn btn-danger">${sessionScope.username}</a>
      </ul>
       <ul class="nav navbar-nav nav navbar-right">
      
-     <a href="index.jsp">logout</a>
+     <a href ="index.jsp" class="btn btn-primary"><span class="glyphicon glyphicon-off" aria-hidden="true"></span>logout</a>
      </ul>
   </div>
 </nav>
@@ -51,10 +50,8 @@
       <a class="navbar-brand" href="index.jsp">FashionCity</a>
     </div>
     <ul class="nav navbar-nav nav navbar-right">
-     <li><a href="AdminHome">Adminhome</a></li>
-      <li><a href="Product">product</a></li>
-      <li><a href="Supplier">supplier</a></li>
-     <li><a href="Category">category</a></li>
+     <li><a href="Login">Login</a></li>
+      <li><a href="signup">Signup</a></li>
      
     </ul>
   </div>

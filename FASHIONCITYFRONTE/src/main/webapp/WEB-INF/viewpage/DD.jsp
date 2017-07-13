@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Handbags</title>
+<title>Designerdresses</title>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="header.jsp"/>
 </head>
@@ -12,7 +12,7 @@
 
 
 <c:forEach items="${prodlist}" var="prodlist"  >
-<c:if test="${7==prodlist.catid }">
+<c:if test="${9==prodlist.catid }">
 
 
 
